@@ -1,0 +1,120 @@
+.form-input{
+  border: 1px solid #DEDEE3;
+  border-radius: 10px;
+  height: 72px;
+  width: 100%;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  label{
+    font-size: 16px;
+    font-family: $Satoshi-Bold;
+    color: #282828;
+    display: block;
+  }
+  input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-family: $Satoshi-Medium;
+    margin-top: 8px;
+    &:focus{
+      outline: 0;
+    }
+  }
+  .icon{
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+
+  .has-dropdown{
+    display: flex;
+    align-items: center;
+    .dropdown{
+      padding-right: 30px;
+      margin-right: 10px;
+      border-right: 1px solid #DEDEE3;
+      position: relative;
+      cursor: pointer;
+      &:after{
+        content: '';
+        background-image: url("./assets/images/arrow-bottom.png");
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+      }
+    }
+  }
+}
+input{
+  &:focus{
+    outline: 0;
+  }
+}
+.checkbox-wrap{
+  display: flex;
+  align-items: center;
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  label{
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content:'';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid #707070;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: 8px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+  }
+  input:checked + label:before{
+    border: 1px solid $primary;
+    background-color: $primary;
+  }
+  input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+.form-half{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  .form-input{
+    width: 48%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
