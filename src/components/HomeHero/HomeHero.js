@@ -10,7 +10,7 @@ import HandIcon from "../../assets/images/icons/hand.png"
 import RosunIcon from "../../assets/images/icons/rosun.png"
 import CloseIcon from "../../assets/images/close.png"
 import VideoSrc from "../../assets/video/ss.mp4"
-
+import ProgressImg from "../../assets/images/video-bg.png"
 const HomeHero = () => {
     const customStyles = {
         content: {
@@ -62,20 +62,34 @@ const HomeHero = () => {
                     </div>
                     <div className="info">
                         <div className="info-right">
+                            <div className="circle-wrap">
+                                <div className="circle">
+                                    <div className="mask full">
+                                        <div className="fill"></div>
+                                    </div>
+                                    <div className="mask half">
+                                        <div className="fill"></div>
+                                    </div>
+                                    <div className="inside-circle">
+                                        <img src={ProgressImg} alt="ProgressImg"/>
+                                    </div>
+                                </div>
+                            </div>
                             <ul>
+
                                 <li data-aos="slide-up">
-                                    <img src={videoIcon} alt="video"/>
+                                    <img src={videoIcon} alt="videoIcon"/>
                                 </li>
                                 <li data-aos="slide-up">
-                                    <img src={HeartIcon} alt="video" />
+                                    <img src={HeartIcon} alt="HeartIcon" />
                                     <span>56</span>
                                 </li>
                                 <li data-aos="slide-up">
-                                    <img src={HandIcon} alt="video" />
+                                    <img src={HandIcon} alt="HandIcon" />
                                         <span>22</span>
                                 </li>
                                 <li data-aos="slide-up">
-                                    <img src={RosunIcon} alt="video" />
+                                    <img src={RosunIcon} alt="RosunIcon" />
                                 </li>
                             </ul>
                         </div>
