@@ -1,6 +1,7 @@
 import React from 'react';
 import CloseIcon from '../assets/images/close-icon.png'
 import hidden from '../assets/images/hidden.png'
+import {Link} from "react-router-dom";
 const Login = () => {
     return (
         <div  className="login box-wrap">
@@ -28,9 +29,11 @@ const Login = () => {
                         </div>
                     </div>
                     <div className="form-footer">
-                        <button className="account-submit">
-                            Login Now
-                        </button>
+                        <Link to="/success">
+                            <button className="account-submit">
+                                Login Now
+                            </button>
+                        </Link>
                 </div>
             </div>
         </div>

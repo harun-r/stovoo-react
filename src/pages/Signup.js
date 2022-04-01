@@ -25,13 +25,15 @@ const Signup = () => {
                     </div>
                 </div>
                 <div className="form-footer">
-                    <button
-                        className="btn-submit">
-                        <img src={ArrowIcon} alt="arrow-right" />
-                    </button>
+                    <Link to="/email-verify">
+                        <button
+                            className="btn-submit">
+                            <img src={ArrowIcon} alt="arrow-right" />
+                        </button>
+                    </Link>
                     <p>
                         Already have an account?
-                        <Link to="/">
+                        <Link to="/login">
                             Login
                         </Link>
                     </p>
