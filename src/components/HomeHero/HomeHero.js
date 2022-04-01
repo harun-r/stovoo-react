@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from 'react-modal';
 import videoBG from "../../assets/images/video-bg.png"
 import PlayButton from "../../assets/images/play.png"
 import AppIcon from "../../assets/images/app.png"
@@ -7,7 +8,27 @@ import videoIcon from "../../assets/images/icons/video.png"
 import HeartIcon from "../../assets/images/icons/heart.png"
 import HandIcon from "../../assets/images/icons/hand.png"
 import RosunIcon from "../../assets/images/icons/rosun.png"
+import CloseIcon from "../../assets/images/close.png"
+import VideoSrc from "../../assets/video/ss.mp4"
+
 const HomeHero = () => {
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+        },
+    };
+    const [modalIsOpen, setIsOpen] = useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+    function closeModal() {
+        setIsOpen(false);
+    }
     return (
         <div className="home-hero">
             <div className="container">
@@ -15,9 +36,29 @@ const HomeHero = () => {
                     <div className="video">
                         <img src={videoBG} alt="video" />
                         <button
+                            onClick={openModal}
                             className="video-play">
                             <img src={PlayButton} alt="PlayButton" />
                         </button>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                        >
+                            <button onClick={closeModal} className="btn-close">
+                                <img src={CloseIcon} alt="close" />
+                            </button>
+                            <div className="modal-wrap">
+                                <div className="video-wrap">
+                                    <video id="videoElement"
+                                           controls="true"
+                                    >
+                                        <source src={VideoSrc} type="video/mp4" />
+                                    </video>
+                                </div>
+
+                            </div>
+                        </Modal>
                     </div>
                     <div className="info">
                         <div className="info-right">

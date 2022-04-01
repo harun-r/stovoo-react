@@ -8,7 +8,9 @@ const Signup = () => {
     return (
         <div className="create-account">
             <button className="close">
-                <img src={Close} alt="close" />
+                <Link to="/">
+                    <img src={Close} alt="close" />
+                </Link>
             </button>
             <div className="content form-box">
                 <div className="head">
