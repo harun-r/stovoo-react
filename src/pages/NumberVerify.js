@@ -39,9 +39,11 @@ const NumberVerify = () => {
                     </div>
                 </div>
                 <div className="form-footer">
-                    <button className="btn-submit">
-                        <img src={arrowRight} alt="arrow-right" />
-                    </button>
+                    <Link to="/number-verify-code">
+                        <button className="btn-submit">
+                            <img src={arrowRight} alt="arrow-right" />
+                        </button>
+                    </Link>
                     <p>
                         Already have an account?
                         <Link to="/login">
