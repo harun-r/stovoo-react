@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from "../../assets/images/logo.png";
 import bar from "../../assets/images/bar.png";
 import close2 from "../../assets/images/close-2.png";
+import {Link} from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
@@ -18,18 +19,32 @@ const Header = () => {
                     <div className="menu-right">
                         <ul>
                             <li>
-                                <a className="active" href="#">Our brief</a>
+                                <Link to="/" className="active">
+                                    Our brief
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" >Contact</a>
+                                <Link to="/" className="active">
+                                    Contact
+                                </Link>
                             </li>
                             <li>
-                                <a href="https://blog.stovoo.com/" >Updates</a>
+                                <Link to="https://blog.stovoo.com/">
+                                    Updates
+                                </Link>
                             </li>
                         </ul>
                         <div className="header-btn">
-                            <button className="btn-login">Login</button>
-                            <button className="btn-create-account">Create Account</button>
+                            <Link to="/login">
+                                <button className="btn-login">
+                                    Login
+                                </button>
+                            </Link>
+                            <Link to="/create-account">
+                                <button className="btn-create-account">
+                                    Create Account
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
