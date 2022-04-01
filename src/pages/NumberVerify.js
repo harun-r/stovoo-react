@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import flag from "../assets/images/flag.png"
 import closeIcon from "../assets/images/close-icon.png"
 import arrowRight from "../assets/images/arrow-right.png"
 import {Link} from "react-router-dom";
 const NumberVerify = () => {
+    const [openDropdown, setOpenDropdown] = useState(false);
+    const toggleClass = () => {
+        setOpenDropdown(!openDropdown);
+    };
     return (
         <div className="enter-number box-wrap">
             <div className="center-box">
@@ -17,7 +21,7 @@ const NumberVerify = () => {
                     <div className="form-main">
                         <div className="form-input">
                             <div className="has-dropdown">
-                                <div className="dropdown">
+                                <div className="dropdown" onClick={toggleClass}>
                                     <img src={flag} alt="flag.png" />
                                 </div>
                                 <div className="field">
@@ -25,8 +29,50 @@ const NumberVerify = () => {
                                     <span className="icon"><img src={closeIcon} alt="icon" /></span>
                                     <input type="text" placeholder="(000)  000  00 00" />
                                 </div>
-                                <div className="country-dropdown">
+                                <div className={openDropdown? 'country-dropdown active' : 'country-dropdown'}>
                                     <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src={flag} alt="flag.png" />
+                                                <span>Country Name</span>
+                                            </a>
+                                        </li>
                                         <li>
                                             <a href="#">
                                                 <img src={flag} alt="flag.png" />
