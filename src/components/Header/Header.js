@@ -3,6 +3,7 @@ import Logo from "../../assets/images/logo.png";
 import bar from "../../assets/images/bar.png";
 import close2 from "../../assets/images/close-2.png";
 import {Link} from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 const Header = () => {
     const [isActive, setActive] = useState(false);
     const toggleClass = () => {
@@ -23,14 +24,14 @@ const Header = () => {
                     <div className= {isActive ? 'menu-right active' : 'menu-right'} >
                         <ul>
                             <li>
-                                <Link to="/" className="active">
+                                <HashLink to="#our-brief" className="active">
                                     Our brief
-                                </Link>
+                                </HashLink >
                             </li>
                             <li>
-                                <Link to="/">
+                                <HashLink to="#contact">
                                     Contact
-                                </Link>
+                                </HashLink>
                             </li>
                             <li>
                                 <Link to="https://blog.stovoo.com/">

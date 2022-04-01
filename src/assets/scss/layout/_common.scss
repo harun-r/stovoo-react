@@ -578,7 +578,9 @@
   a{
     text-decoration: none;
     font-family: $Satoshi-Bold;
-    color:$black
+    color:$black;
+    display: inline-block;
+    margin-left: 10px;
   }
 }
 .create-account{

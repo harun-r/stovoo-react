@@ -2,7 +2,7 @@ import React from 'react';
 
 const GridShowCase = (props) => {
     return (
-        <div className="content-showcase-wrap">
+        <div className="content-showcase-wrap" id="our-brief">
             <div className="container">
                 <div className={`content-inner bg-yellow ${ props.bgColor }`}>
                     <div className={`cover ${props.secOrder}`}>
