@@ -1,7 +1,7 @@
 import React from 'react';
 import appIcon from "../assets/images/app.png"
 import googlePLay from "../assets/images/google-play.png"
-import LogoWhite from "../assets/images/google-play.png"
+import LogoWhite from "../assets/images/logo-white.png"
 import {Link} from "react-router-dom";
 const Success = () => {
     return (

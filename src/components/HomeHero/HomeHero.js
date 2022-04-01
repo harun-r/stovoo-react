@@ -11,6 +11,7 @@ import RosunIcon from "../../assets/images/icons/rosun.png"
 import CloseIcon from "../../assets/images/close.png"
 import VideoSrc from "../../assets/video/ss.mp4"
 import ProgressImg from "../../assets/images/video-bg.png"
+import { AnimationOnScroll  as Animation} from 'react-animation-on-scroll';
 const HomeHero = () => {
     const customStyles = {
         content: {
@@ -62,6 +63,7 @@ const HomeHero = () => {
                     </div>
                     <div className="info">
                         <div className="info-right">
+                            <Animation animateIn="animate__fadeInUp">
                             <div className="circle-wrap">
                                 <div className="circle">
                                     <div className="mask full">
@@ -75,36 +77,56 @@ const HomeHero = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ul>
+                            </Animation>
 
-                                <li data-aos="slide-up">
-                                    <img src={videoIcon} alt="videoIcon"/>
-                                </li>
-                                <li data-aos="slide-up">
-                                    <img src={HeartIcon} alt="HeartIcon" />
-                                    <span>56</span>
-                                </li>
-                                <li data-aos="slide-up">
-                                    <img src={HandIcon} alt="HandIcon" />
-                                        <span>22</span>
-                                </li>
-                                <li data-aos="slide-up">
-                                    <img src={RosunIcon} alt="RosunIcon" />
-                                </li>
-                            </ul>
+                                <ul>
+                                    <Animation animateIn="animate__fadeInUp">
+                                        <li data-aos="slide-up">
+                                            <img src={videoIcon} alt="videoIcon"/>
+                                        </li>
+                                    </Animation>
+                                    <Animation animateIn="animate__fadeInUp">
+                                        <li data-aos="slide-up">
+                                            <img src={HeartIcon} alt="HeartIcon" />
+                                            <span>56</span>
+                                        </li>
+                                    </Animation>
+                                    <Animation animateIn="animate__fadeInUp">
+                                        <li data-aos="slide-up">
+                                            <img src={HandIcon} alt="HandIcon" />
+                                                <span>22</span>
+                                        </li>
+                                    </Animation>
+                                    <Animation animateIn="animate__fadeInUp">
+                                        <li data-aos="slide-up">
+                                            <img src={RosunIcon} alt="RosunIcon" />
+                                        </li>
+                                    </Animation>
+                                </ul>
+
                         </div>
                     </div>
                     <div className="content">
-                        <h3>Order great Foods and much more! </h3>
+                        <Animation
+                            animateIn="animate__fadeInUp"
+                        >
+                            <h3>Order great Foods and much more! </h3>
+                        </Animation>
+                        <Animation animateIn="animate__fadeInUp">
                         <p>Even better with recipes, groceries, and more,
                             get on Board  with a more Fun & exciting way to order food & today.</p>
+                        </Animation>
                         <div className="download-btn">
-                            <div className="app">
-                                <button><img src={AppIcon} alt="app"/></button>
-                            </div>
-                            <div className="play">
-                                <button><img src={GooglePlayIcon} alt="google-play"/></button>
-                            </div>
+                            <Animation animateIn="animate__fadeInUp">
+                                <div className="app">
+                                    <button><img src={AppIcon} alt="app"/></button>
+                                </div>
+                            </Animation>
+                            <Animation animateIn="animate__fadeInUp">
+                                <div className="play">
+                                    <button><img src={GooglePlayIcon} alt="google-play"/></button>
+                                </div>
+                            </Animation>
                         </div>
                     </div>
                 </div>

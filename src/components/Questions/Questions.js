@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { AnimationOnScroll  as Animation} from 'react-animation-on-scroll';
 import {
     Accordion,
     AccordionItem,
@@ -17,7 +17,8 @@ const Questions = () => {
                 </div>
                 <div className="question-ans">
                     <Accordion>
-                        <AccordionItem>
+                        <Animation animateIn="animate__fadeInUp">
+                            <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
                                     What is StoVoo
@@ -29,7 +30,9 @@ const Questions = () => {
                                 </p>
                             </AccordionItemPanel>
                         </AccordionItem>
-                        <AccordionItem>
+                        </Animation>
+                        <Animation animateIn="animate__fadeInUp">
+                            <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
                                     What is Quicksales
@@ -41,7 +44,9 @@ const Questions = () => {
                                 </p>
                             </AccordionItemPanel>
                         </AccordionItem>
-                        <AccordionItem>
+                        </Animation>
+                        <Animation animateIn="animate__fadeInUp">
+                            <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
                                     What Makes StoVoo Unique?
@@ -53,7 +58,9 @@ const Questions = () => {
                                 </p>
                             </AccordionItemPanel>
                         </AccordionItem>
-                        <AccordionItem>
+                        </Animation>
+                        <Animation animateIn="animate__fadeInUp">
+                            <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>
                                     Payment Methods
@@ -65,6 +72,7 @@ const Questions = () => {
                                 </p>
                             </AccordionItemPanel>
                         </AccordionItem>
+                        </Animation>
                     </Accordion>
                 </div>
             </div>
