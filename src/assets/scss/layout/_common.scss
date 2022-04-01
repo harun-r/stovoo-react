@@ -52,13 +52,12 @@
       position: absolute;
       right: -80px;
       top: 0;
-      padding-top: 40px;
       @media (max-width: 768px) {
         position: static;
         width: 100%;
         order: 2;
         padding-top: 0;
-        margin-top: -75px;
+        margin-top: -120px;
       }
       .radial-progress-inner{
         width: 54px !important;
@@ -738,4 +737,69 @@
     }
   }
 
+}
+.circle-wrap {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 60px, 60px, 30px);
+}
+
+.circle-wrap .inside-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+/* color animation */
+
+/* 3rd progress bar */
+.mask .fill {
+  clip: rect(0px, 30px, 60px, 0px);
+  background-color:#ff8906;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+@keyframes fill{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
 }
