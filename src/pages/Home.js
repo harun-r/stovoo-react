@@ -2,6 +2,10 @@ import React from 'react';
 import Header from "../components/Header/Header";
 import HomeHero from "../components/HomeHero/HomeHero";
 import GridShowCase from "../components/GridShowCase/GridShowCase";
+import FunFact from "../components/FunFact/FunFact";
+import Questions from "../components/Questions/Questions";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Footer from "../components/Footer/Footer";
 import img1 from "../assets/images/img-1.png"
 import img2 from "../assets/images/img-2.png"
 import img3 from "../assets/images/img-3.png"
@@ -11,9 +15,6 @@ const Home = () => {
         <div className="home">
             <Header/>
             <HomeHero/>
-            {
-
-            }
             <GridShowCase
                 imgURL={img1}
                 title="Binge watch and we get it delivered!"
@@ -46,6 +47,10 @@ const Home = () => {
                 textColor="text-white"
                 bgColor="bg-black"
             />
+            <FunFact/>
+            <Testimonials/>
+            <Questions/>
+            <Footer/>
         </div>
     );
 };
