@@ -1,0 +1,65 @@
+/* -------------------------------------------
+Mixins styles here... */
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Font size & Line height
+@mixin font-size($fontSize) {
+  font-size: ($fontSize / 16) + rem;
+}
+
+@mixin line-height($lineHeight) {
+  line-height: ($lineHeight / 16) + rem;
+}
+
+
+
+// Absolute Position
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+// Absolute fixed
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: fixed;
+}
+@mixin display-flex($flex) {
+  display: $flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+@mixin align-items($center){
+  align-items: $center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+@mixin justify-content($center){
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: $center;
+}
+// Display Flexbox
+@mixin display-center {
+  @include display-flex(flex);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+// Truncate
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

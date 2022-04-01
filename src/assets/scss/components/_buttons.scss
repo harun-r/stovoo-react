@@ -1,0 +1,40 @@
+button{
+  border: 0;
+  @include font-size(16);
+  font-family: $Satoshi-Bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  &:focus{
+    outline: 0;
+  }
+  @media (max-width: 768px) {
+    @include font-size(13);
+  }
+
+  &.btn-login{
+    border: 1px solid $primary;
+    color: $primary;
+    border-radius: 6px;
+    background-color: transparent;
+    @include size(120px, 50px);
+    &:hover{
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  &.btn-create-account{
+    border: none;
+    color: $white;
+    border-radius: 6px;
+    background-color: $primary;
+    @include size(200px, 50px);
+    &:hover{
+      background-color: rgba($primary, 1.4);
+    }
+    @media (max-width: 768px) {
+      width: auto;
+      padding: 10px;
+    }
+  }
+}
