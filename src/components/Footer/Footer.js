@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimationOnScroll  as Animation} from 'react-animation-on-scroll';
 import googlePlay from "../../assets/images/google-play.png"
 import appLogo from "../../assets/images/app.png"
 import LogoFooter from "../../assets/images/logo-white.png"
@@ -9,8 +10,9 @@ import instagram from "../../assets/images/instagram.png"
 import {Link} from "react-router-dom";
 const Footer = () => {
     return (
-        <div className="footer" id="contact">
-            <div className="footer-top">
+        <div className="footer" id="contact" >
+            <Animation animateIn="animate__fadeInUp">
+                <div className="footer-top">
                 <h3>Download and try it now</h3>
                 <p>Welcome to the stovoo family; we are constantly evolving & looking for more fun and exciting ways to
                     make your food ordering experience the best you can have; I would love to see how you use stovoo
@@ -24,7 +26,9 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-            <div className="footer-center">
+            </Animation>
+            <Animation animateIn="animate__fadeInUp">
+                <div className="footer-center">
                 <div>
                         <img className="logo-f" src={LogoFooter} alt="logo-white" />
                         <p> Limestone Road STE 200-C in Wilmington, DE 19808 hello@stovoo.com +1 (302) 451-9589</p>
@@ -52,6 +56,7 @@ const Footer = () => {
                         </ul>
                 </div>
             </div>
+            </Animation>
             <div className="footer-bottom">
                 <div className="container">
                     <div className="footer-inner">
