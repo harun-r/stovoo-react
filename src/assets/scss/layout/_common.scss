@@ -412,17 +412,30 @@
     }
   }
   .question-ans{
-    .c-accordion {
+    .accordion {
       border: none;
-      border-top: 1px solid #ddd;
+      border-radius: 0;
     }
-    .c-accordion .c-accordion__item {
-      border-bottom: 1px solid  #ddd;
+    .accordion__button{
+      position: relative;
     }
-    .c-accordion .c-accordion__item.-active .c-accordion__title {
-      background-color: transparent;
+    .accordion__button:before {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      &[aria-disabled="true"]{
+        &:before{
+          transform: rotate(45deg);
+        }
+      }
     }
-    .c-accordion__title {
+    .accordion__button[aria-expanded='true']::before,
+    .accordion__button[aria-selected='true']::before {
+      transform: rotate(45deg);
+    }
+    .accordion__button {
+      background-color: #f4f4f4;
       padding: 1.8rem  0;
       font-size: 16px;
       color: $black;
@@ -431,7 +444,8 @@
         padding: 1rem 0;
       }
     }
-    .c-accordion__content {
+
+    .accordion__panel {
       border-top: none;
       padding: 0.5rem 0;
     }
@@ -853,3 +867,4 @@
     display: block;
   }
 }
+
