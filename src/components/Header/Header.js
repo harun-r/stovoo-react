@@ -1,22 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from "../../assets/images/logo.png";
 import bar from "../../assets/images/bar.png";
 import close2 from "../../assets/images/close-2.png";
 import {Link} from "react-router-dom";
 const Header = () => {
+    const [isActive, setActive] = useState(false);
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
     return (
         <div className="header">
             <div className="container">
                 <div className="header-inner">
-                    <div className="bar">
-                        <img src={bar} alt="logo"/>
-                        <img src={close2} alt="logo"/>
+                    <div className="bar"  onClick={toggleClass} >
+                        <img className={!isActive ? 'active logo-bar' : 'logo-bar'} src={bar} alt="logo"/>
+                        <img className={isActive ? 'active logo-close' : 'logo-close'} src={close2} alt="logo"/>
                     </div>
 
                     <div className="logo">
                         <img src={Logo} alt="Logo"/>
                     </div>
-                    <div className="menu-right">
+                    <div className= {isActive ? 'menu-right active' : 'menu-right'} >
                         <ul>
                             <li>
                                 <Link to="/" className="active">

@@ -803,3 +803,19 @@
     transform: rotate(135deg);
   }
 }
+
+//logo-bar
+.logo-bar{
+  display: none;
+  cursor: pointer;
+  &.active{
+    display: block;
+  }
+}
+.logo-close{
+  display: none;
+  cursor: pointer;
+  &.active{
+    display: block;
+  }
+}
