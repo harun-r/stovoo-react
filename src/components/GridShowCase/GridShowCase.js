@@ -6,9 +6,7 @@ const GridShowCase = (props) => {
             <div className="container">
                 <div className={`content-inner bg-yellow ${ props.bgColor }`}>
                     <div className={`cover ${props.secOrder}`}>
-                        <Animation>
-                            <img src={props.imgURL} alt="images" />
-                        </Animation>
+                        <img src={props.imgURL} alt="images" />
                     </div>
                     <div className="content">
                         <Animation animateIn="animate__fadeInUp">
