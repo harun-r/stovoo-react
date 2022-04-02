@@ -193,13 +193,17 @@
     &.bg-black{
       background-color: $black;
     }
+    .cover{
+      height: 540px;
+      @media (max-width: 768px) {
+        height: auto;
+      }
+    }
     .cover,
     .content{
       width: 50%;
-      height: 540px;
       @media (max-width: 768px) {
         width: 100%;
-        height: auto;
       }
     }
     .content{
