@@ -34,9 +34,9 @@ const Header = () => {
                                 </HashLink>
                             </li>
                             <li>
-                                <Link to="https://blog.stovoo.com/">
+                                <a href="https://blog.stovoo.com">
                                     Updates
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                         <div className="header-btn">
