@@ -11,12 +11,14 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <div className="footer" id="contact" >
-            <Animation animateIn="animate__fadeInUp">
+
                 <div className="footer-top">
-                <h3>Download and try it now</h3>
-                <p>Welcome to the stovoo family; we are constantly evolving & looking for more fun and exciting ways to
-                    make your food ordering experience the best you can have; I would love to see how you use stovoo
-                    today.</p>
+                    <Animation animateIn="animate__fadeInUp">
+                        <h3>Download and try it now</h3>
+                        <p>Welcome to the stovoo family; we are constantly evolving & looking for more fun and exciting ways to
+                            make your food ordering experience the best you can have; I would love to see how you use stovoo
+                            today.</p>
+                    </Animation>
                 <div className="footer-btn">
                     <Link to="/">
                         <img src={googlePlay} alt="app"/>
@@ -26,8 +28,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-            </Animation>
-            <Animation animateIn="animate__fadeInUp">
+
                 <div className="footer-center">
                 <div>
                         <img className="logo-f" src={LogoFooter} alt="logo-white" />
@@ -56,7 +57,7 @@ const Footer = () => {
                         </ul>
                 </div>
             </div>
-            </Animation>
+
             <div className="footer-bottom">
                 <div className="container">
                     <div className="footer-inner">
